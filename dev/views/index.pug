@@ -1,0 +1,66 @@
+doctype html
+html(lang="ru")
+    head
+        include component/headDefolt
+        link(rel="stylesheet", href="style/index.min.css")
+        title Document
+    body 
+    include component/header
+    section.banner
+    section.project 
+        .container-fluid
+            .container
+                h2.text-center.fs-3 Наши работы
+                p.text-center.mb-4.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing.
+                .row.g-2
+                    - for(var i=0; i<14; i++)
+                        .col-3
+                            .card 
+                                .card-body.text-center 
+                                    img(src="img/f1.jpg", alt="")
+                                    h3.fs-5 Имя
+                                    p.text-muted Lorem, ipsum dolor.
+                                    p от 00 000 руб 
+                                    button.btn.btn-outline-dark Подробнее
+    section.production 
+        .container-fluid
+            .container
+                h2.text-center.fs-3 Производство
+                p.text-center.mb-4.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing.
+                .row 
+                    .col-md-6
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum distinctio perferendis in, autem vitae reiciendis! Praesentium maiores quos quibusdam corrupti sapiente impedit voluptate, asperiores, saepe reprehenderit nam error molestias assumenda minus libero itaque est tenetur dicta. Reiciendis, vel molestiae iure quo voluptates, est reprehenderit laboriosam ab assumenda eveniet quasi totam nulla illum praesentium! Distinctio quod vitae veniam quisquam itaque impedit, culpa ipsum facere neque beatae excepturi nulla minima quis id! Nam dicta assumenda dignissimos eius. Non dolore neque magni inventore voluptate? Dolorem ipsa quam, possimus facilis temporibus, eaque vel, hic sit labore non sint neque alias tempore accusamus esse nesciunt?
+                    .col-md-6
+                        .bg-secondary.h-100
+    section.about 
+        .container-fluid
+            .container
+                h2.text-center.fs-3.mb-4 О нас
+                .row 
+                    .col-4 
+                        .card.text-center.border-0
+                            .card-body 
+                                h3.fs-4 title  
+                                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
+                    .col-4 
+                        .card.text-center.border-0
+                            .card-body 
+                                h3.fs-4 title  
+                                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
+                    .col-4 
+                        .card.text-center.border-0
+                            .card-body 
+                                h3.fs-4 title  
+                                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
+    section.about 
+        .container-fluid
+            .container
+                h2.text-center.fs-3.mb-4 Контакты
+                .row 
+                    .col-md-6 
+                        h3.fs-4 Loft Life 
+                        p Lorem ipsum dolor sit.
+                        p Lorem ipsum dolor sit.
+                        p Lorem ipsum dolor sit.
+    include component/footer
+    script(src="script/index.js") 
