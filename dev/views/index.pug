@@ -12,16 +12,16 @@ html(lang="ru")
             .container
                 h2.text-center.fs-3 Наши работы
                 p.text-center.mb-4.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing.
-                .row.g-2
+                .row.g-4
                     - for(var i=0; i<14; i++)
-                        .col-3
-                            .card 
+                        .col-xl-3.col-md-4.col-sm-6
+                            .card.border-0.bg-main.align-items-center
+                                img.project__img.rounded-circle(src="img/f1.jpg", alt="name")
                                 .card-body.text-center 
-                                    img(src="img/f1.jpg", alt="")
                                     h3.fs-5 Имя
                                     p.text-muted Lorem, ipsum dolor.
                                     p от 00 000 руб 
-                                    button.btn.btn-outline-dark Подробнее
+                                    button.btn.btn-outline-light Подробнее
     section.production 
         .container-fluid
             .container
