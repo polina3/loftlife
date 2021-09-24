@@ -1,3 +1,64 @@
+*
+    padding: 0
+    margin: 0
+
+html
+    height: 100%
+    scroll-behavior: smooth
+    --my-green: #2FA84F
+    --my-greenSmooth: #DCF7E3
+    --my-black: #3E4345
+
+body
+    display: grid
+    grid-template-rows: min-content 1fr min-content
+    min-height: 100%
+    color: var(--my-black)
+
+// скролл
+::-webkit-scrollbar
+    width: 7px
+
+::-webkit-scrollbar-track
+    background: #f0f0f0
+    border-radius: 4px
+
+::-webkit-scrollbar-thumb
+    background: #afafaf
+    border-radius: 4px
+
+::-webkit-scrollbar-thumb:window-inactive
+    background: #afafaf
+
+
+// текст
+.fw-medium
+    font-weight: 600 !important
+
+// картинки
+img
+    max-width: 100%
+    max-height: 100%
+
+// ссылки 
+a
+    color: var(--my-black)
+    text-decoration: none
+
+// кнопки 
+.btn:focus,
+.form-control:focus
+    box-shadow: none !important
+
+// секция 
+section
+    margin-bottom: 3rem
+
+// меню
+.nav-link
+    color: var(--my-black)
+
+
 .banner
     height: 450px
     background: #ccc
