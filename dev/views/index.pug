@@ -21,7 +21,7 @@ html(lang="ru")
                                     h3.fs-5 Имя
                                     p.text-muted Lorem, ipsum dolor.
                                     p от 00 000 руб 
-                                    button.btn.btn-outline-light Подробнее
+                                    button.btn.btn-outline-light(type="button"  data-bs-toggle="modal" data-bs-target="#modal--des") Подробнее
     section.production 
         .container-fluid
             .container
@@ -52,6 +52,7 @@ html(lang="ru")
                             .card-body 
                                 h3.fs-4 title  
                                 p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
-    
+    include component/modalLid
+    include component/modalDes
     include component/footer
     script(src="script/index.js") 

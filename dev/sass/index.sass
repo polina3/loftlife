@@ -8,11 +8,12 @@ html
     --my-color-s1: #7405b2
     --my-color-s2: #1a6037
     --my-color-s3: #262628
+    --my-color-s4: #414142
     --my-color-rgb-s3: 38, 38, 40
 
 body
-    display: grid
-    grid-template-rows: min-content 1fr min-content
+    // display: grid
+    // grid-template-rows: min-content 1fr min-content
     min-height: 100%
     color: #fff
     background: var(--my-color-s3)
@@ -35,16 +36,23 @@ body
 // фон
 .bg-main
     background: var(--my-color-s3)
+    color: #fff
+.bg-s2
+    background-color: var(--my-color-s4)
+    color: #fff
 
 // обводки
 .border-s1
     border-color: var(--my-color-s1) !important
+
 .border-s2
     border-color: var(--my-color-s2) !important
 
 // текст
 .fw-medium
     font-weight: 600 !important
+.text-color-main
+    color: #fff
 
 // картинки
 img
@@ -76,6 +84,15 @@ a
 label
     cursor: pointer
 
+.input-data
+    &::-webkit-input-placeholder
+        color: #ffffff63
+    &:focus
+        background: #ffffff7c
+        &::-webkit-input-placeholder
+            color: #202020
+
+
 // секция 
 section
     margin-bottom: 3rem
@@ -101,20 +118,22 @@ header
     svg
         color: #fff
 
-#nav-menu
-    .btn-close
-        background: transparent
-        svg
-            display: block
-            width: 100%
-            height: 100%
+.btn-close
+    background: transparent
+    svg
+        display: block
+        width: 100%
+        height: 100%
 
 .banner
     height: 450px
     background: #ccc
 
-
 .project__img
     width: 250px
     height: 250px
     object-fit: cover
+
+@media (prefers-reduced-motion: reduce)
+    .modal
+        animation: reduce

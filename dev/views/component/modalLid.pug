@@ -1,0 +1,12 @@
+#modal--lid.modal(tabindex="-1" style="z-index: 10000;" aria-hidden="true"  aria-labelledby="...")
+    .modal-dialog.modal-dialog-centered.modal-dialog-scrollable 
+        .modal-content.bg-s2
+            .modal-header
+                h2.fs-3.modal-title Lorem, ipsum dolor.
+                button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
+                    include ../svg/close.svg 
+            .modal-body
+                form
+                    input.bg-s2.form-control.input-data.mb-3(type="text" placeholder="Ваше имя" name="name" autocomplete="off")
+                    input.bg-s2.form-control.input-data.input-phone.mb-3(type="text" placeholder="Телефон" name="phone" inputmode="numeric" autocomplete="off")
+                    button.btn.btn-outline-light(type="submit") Отправить

@@ -2,7 +2,7 @@ header.py-xl-0.container-fluid.border-bottom
     .container.py-2
         .row.align-items-center
             .col-lg-3.col-5.d-flex.align-items-center
-                button.header__button-toggle.btn.p-0.me-3.d-lg-none.d-inline(type="button" data-bs-toggle="offcanvas" data-bs-target="#nav-menu" aria-controls="offcanvasWithBackdrop")
+                button.header__button-toggle.btn.p-0.me-3.d-lg-none.d-inline(type="button" data-bs-toggle="offcanvas" data-bs-target="#nav-menu")
                     include ../svg/toggleMenu.svg
                 a(href="#") LOGO 
             .col-lg-6.d-lg-block.d-none
@@ -18,21 +18,20 @@ header.py-xl-0.container-fluid.border-bottom
                             a.nav-link(href="#project") О нас
             .col-lg-3.col-7.text-end
                 a(href="tel:+7(000)0000000") +7(000)000-00-00 
-    #nav-menu.bg-main.offcanvas.offcanvas-start( style="z-index: 2000;" tabindex='-1' aria-labelledby="offcanvasWithBackdropLabel")
-        .offcanvas-header.border-bottom.border-s2
-            a(href='index.html') LOGO
-            button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Закрыть') 
-                include ../svg/close.svg 
-        .offcanvas-body.p-0
-            nav.navbar
-                ul.list-group.list-group-flush.w-100
-                    li.bg-main.list-group-item.border-s2
-                        a.nav-link( data-bs-dismiss='offcanvas' href="#project") Наши работы
-                    li.bg-main.list-group-item.border-s2
-                        a.nav-link( data-bs-dismiss='offcanvas' href="#project") Производство
-                    li.bg-main.list-group-item.border-s2
-                        a.nav-link( data-bs-dismiss='offcanvas' href="#project") Контакты
-                    li.bg-main.list-group-item.border-s2
-                        a.nav-link( data-bs-dismiss='offcanvas' href="#project") О нас
+#nav-menu.bg-main.offcanvas.offcanvas-start.bg-s2( style="z-index: 10000;" tabindex='-1' )
+    .offcanvas-header.border-bottom.border-s2
+        a(href='index.html') LOGO
+        button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Закрыть') 
+            include ../svg/close.svg 
+    .offcanvas-body.p-0
+        ul.list-group.list-group-flush.w-100
+            li.bg-s2.list-group-item.border-s2
+                a.nav-link( data-bs-dismiss='offcanvas' href="#project") Наши работы
+            li.bg-s2.list-group-item.border-s2
+                a.nav-link( data-bs-dismiss='offcanvas' href="#project") Производство
+            li.bg-s2.list-group-item.border-s2
+                a.nav-link( data-bs-dismiss='offcanvas' href="#project") Контакты
+            li.bg-s2.list-group-item.border-s2
+                a.nav-link( data-bs-dismiss='offcanvas' href="#project") О нас
 
 
