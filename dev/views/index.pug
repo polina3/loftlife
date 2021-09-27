@@ -16,7 +16,7 @@ html(lang="ru")
                     - for(var i=0; i<14; i++)
                         .col-xl-3.col-md-4.col-sm-6
                             .card.border-0.bg-main.align-items-center
-                                img.project__img.rounded-circle(src="img/f1.jpg", alt="name")
+                                img.project__img.rounded-circle.border.border-s2(src="img/f1.jpg", alt="name")
                                 .card-body.text-center 
                                     h3.fs-5 Имя
                                     p.text-muted Lorem, ipsum dolor.
@@ -52,15 +52,6 @@ html(lang="ru")
                             .card-body 
                                 h3.fs-4 title  
                                 p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
-    section.about 
-        .container-fluid
-            .container
-                h2.text-center.fs-3.mb-4 Контакты
-                .row 
-                    .col-md-6 
-                        h3.fs-4 Loft Life 
-                        p Lorem ipsum dolor sit.
-                        p Lorem ipsum dolor sit.
-                        p Lorem ipsum dolor sit.
+    
     include component/footer
     script(src="script/index.js") 
