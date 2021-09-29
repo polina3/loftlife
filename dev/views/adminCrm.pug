@@ -1,0 +1,40 @@
+doctype html
+html(lang="ru")
+    head
+        include component/adminHeadDefolt
+    body 
+        main 
+            include component/adminHeader
+            section
+                .container-fluid
+                    .container
+                        h1 Заявки
+                        table.table.table-hover.table-striped
+                            thead 
+                                tr 
+                                    th(scope="col") №
+                                    th(scope="col") ФИО
+                                    th(scope="col") Телефон
+                                    th(scope="col") Дата
+                                    th(scope="col") Статус
+                            tbody 
+                                tr 
+                                    th 1
+                                    th Боб Смит
+                                    th 
+                                        a(href="tel:+70000000000") +7(000)000-00-00 
+                                    th 00/00/2000 00:00
+                                    th 
+                                        select.form-select
+                                            option(value="0") Статус 
+                                tr 
+                                    th 1
+                                    th Боб Смит
+                                    th 
+                                        a(href="tel:+70000000000") +7(000)000-00-00 
+                                    th 00/00/2000 00:00
+                                    th 
+                                        select.form-select
+                                            option(value="0") Статус 
+
+
