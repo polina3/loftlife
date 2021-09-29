@@ -1,8 +1,8 @@
 
-footer.py-1.bg-s2
-    .container-fluid
+footer.py-1.bg-s2.border-top.border-secondary
+    .container-fluid.py-5
         .container
-            section.about 
+            section#contact.contact 
                 h2.text-center.fs-3.mb-4 Контакты
                 .row.g-3
                     - for(var i=0; i<2; i++)
@@ -22,12 +22,12 @@ footer.py-1.bg-s2
                                 span.text-muted Lorem, ipsum dolor.
                     .col-lg-4.col-12 
                         h3.fs-4.mb-3 Напишите нам
-                        form
+                        form.js-validate
                             .row.g-3
                                 .col-md-6.col-12
-                                    input.bg-s2.form-control.input-data(type="text" placeholder="Ваше имя" name="name" autocomplete="off")
+                                    input.bg-s2.form-control.input-data(type="text" placeholder="Ваше имя" name="name" autocomplete="off" data-validate)
                                 .col-md-6.col-12
-                                    input.bg-s2.form-control.input-data.input-phone(type="text" placeholder="Телефон" name="phone" inputmode="numeric" autocomplete="off")
+                                    input.bg-s2.form-control.input-data.input-phone(type="tel" placeholder="Телефон" name="phone" inputmode="numeric" autocomplete="off" data-validate)
                                 .col-12 
                                     textarea.bg-s2.input-data.form-control.w-100(name="message" placeholder="...") 
                                 .col-12 
@@ -37,12 +37,17 @@ footer.py-1.bg-s2
                                             a(href="/politics/") обработку персональных данных
                                 .col-12
                                     button.btn.btn-outline-light.w-100(type="submit") Отправить
-    .container-fluid.py-3.border-top
+    .container-fluid.py-3.border-top.border-secondary.bg-main
         .container
             .row
-                .col-md-6
-                    a(href="#") LOGO 
-                .col-md-6
-                    a(href="#") VK 
-                    a(href="#") 
-                        include ../svg/instagram.svg 
+                .col-6
+                    a.icon-logo(href="#") 
+                        include ../svg/logo.svg  
+                .col-6
+                    .row.row-cols-auto.justify-content-end
+                        .col
+                            a(href="#").icon-network 
+                                include ../svg/vk.svg 
+                        .col
+                            a(href="#").icon-network 
+                                include ../svg/instagram.svg 

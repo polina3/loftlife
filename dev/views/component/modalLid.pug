@@ -6,7 +6,9 @@
                 button.btn-close(type="button" data-bs-dismiss="modal" aria-label="Close")
                     include ../svg/close.svg 
             .modal-body
-                form
-                    input.bg-s2.form-control.input-data.mb-3(type="text" placeholder="Ваше имя" name="name" autocomplete="off")
-                    input.bg-s2.form-control.input-data.input-phone.mb-3(type="text" placeholder="Телефон" name="phone" inputmode="numeric" autocomplete="off")
+                form.js-validate
+                    .mb-3
+                        input.bg-s2.form-control.input-data(type="text" placeholder="Ваше имя" name="name" autocomplete="off" data-validate)
+                    .mb-3
+                        input.bg-s2.form-control.input-data.input-phone(type="tel" placeholder="Телефон" name="phone" inputmode="numeric" autocomplete="off" data-validate)
                     button.btn.btn-outline-light(type="submit") Отправить

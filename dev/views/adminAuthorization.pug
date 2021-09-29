@@ -1,0 +1,16 @@
+doctype html
+html(lang="ru")
+    head
+        include component/adminHeadDefolt
+    body 
+        main 
+            .container-fluid
+                .container
+                    .row.justify-content-center
+                        .col-12 
+                            h2.text-center Авторизация
+                        .col-xl-4.col-sm-6.col-12 
+                            form.js-validate
+                                input.form-control.mb-3(type="text" placeholder="Логин" name="login" autocomplete="off" data-validate)
+                                input.form-control.mb-3(type="password" placeholder="Пароль" name="password" autocomplete="off" data-validate)
+                                button.btn.btn-outline-dark.w-100(type="submit") Отправить

@@ -1,0 +1,31 @@
+header.py-xl-0.container-fluid.border-bottom
+    .container.py-2
+        .row.align-items-center
+            .col-lg-3.col-5.d-flex.align-items-center
+                button.header__button-toggle.btn.p-0.me-3.d-lg-none.d-inline(type="button" data-bs-toggle="offcanvas" data-bs-target="#nav-menu")
+                    include ../svg/toggleMenu.svg
+                a.icon-logo(href="#") 
+                    include ../svg/logo.svg 
+            .col-lg-6.d-lg-block.d-none
+                nav.d-flex.justify-content-center
+                    ul.nav.justify-content-center
+                        li
+                            a.nav-link(href="#") Контент
+                        li
+                            a.nav-link(href="#") Заявки
+            .col-lg-3.col-7.text-end
+                a(href="tel:+7(000)0000000") +7(000)000-00-00 
+#nav-menu.offcanvas.offcanvas-start( style="z-index: 10000;" tabindex='-1' )
+    .offcanvas-header.border-bottom
+        a.icon-logo(href='index.html') 
+            include ../svg/logo.svg
+        button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Закрыть') 
+            include ../svg/close.svg 
+    .offcanvas-body.p-0
+        ul.list-group.list-group-flush.w-100
+            li.list-group-item
+                a.nav-link( data-bs-dismiss='offcanvas' href="#") Контент
+            li.list-group-item
+                a.nav-link( data-bs-dismiss='offcanvas' href="#") Заявки
+
+

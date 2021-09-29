@@ -95,7 +95,7 @@ label
 
 // секция 
 section
-    margin-bottom: 3rem
+    margin-bottom: 5rem
 
 // шапка
 header
@@ -118,6 +118,7 @@ header
     svg
         color: #fff
 
+// закрывающая кнопка
 .btn-close
     background: transparent
     svg
@@ -129,11 +130,33 @@ header
     height: 450px
     background: #ccc
 
+// картинки проектов
 .project__img
     width: 250px
     height: 250px
     object-fit: cover
 
+// иконки соц сетей
+.icon-network
+    svg
+        display: inline-block
+        width: 25px
+        height: 25px
+
+// лого
+.icon-logo
+    svg
+        width: 75px
+        height: auto
+        rect
+            opacity: 0
+
 @media (prefers-reduced-motion: reduce)
     .modal
         animation: reduce
+
+@media (max-width: 576px)
+    .icon-logo
+        svg
+            width: 65px
+            height: auto

@@ -3026,4 +3026,30 @@ $(document).ready(function(){
         })
     }
 
+    // валидация и отправка
+    $('.js-validate').submit(function (event) {
+        var form = $(this);
+        form.find('*[data-validate]').each(function (i, elem) {
+            var value = $(elem).val();
+            var type = $(elem).attr("type");
+            if ((!value || value === undefined || value === null || value === '' || value === '0')) {
+                $(elem).addClass('is-invalid');
+                setTimeout(function () {
+                    $(elem).removeClass('is-invalid')
+                }.bind(elem), 2000);
+                event.preventDefault();
+            }
+            if (type == "tel") {
+                let s = $(elem).val().search('_')
+                if (($(elem).val().length == 0) || (s != -1)) {
+                    $(elem).addClass('is-invalid');
+                    setTimeout(function () {
+                        $(elem).removeClass('is-invalid')
+                    }.bind(elem), 2000);
+                    event.preventDefault();
+                }
+            }
+        })
+    })
+
 })

@@ -4,23 +4,25 @@ header.py-xl-0.container-fluid.border-bottom
             .col-lg-3.col-5.d-flex.align-items-center
                 button.header__button-toggle.btn.p-0.me-3.d-lg-none.d-inline(type="button" data-bs-toggle="offcanvas" data-bs-target="#nav-menu")
                     include ../svg/toggleMenu.svg
-                a(href="#") LOGO 
+                a.icon-logo(href="index.html") 
+                    include ../svg/logo.svg  
             .col-lg-6.d-lg-block.d-none
                 nav.d-flex.justify-content-center
                     ul.nav.justify-content-center
                         li
                             a.nav-link(href="#project") Наши работы
                         li
-                            a.nav-link(href="#project") Производство
+                            a.nav-link(href="#production") Производство
                         li
-                            a.nav-link(href="#project") Контакты
+                            a.nav-link(href="#about") О нас
                         li
-                            a.nav-link(href="#project") О нас
+                            a.nav-link(href="#contact") Контакты
             .col-lg-3.col-7.text-end
                 a(href="tel:+7(000)0000000") +7(000)000-00-00 
 #nav-menu.bg-main.offcanvas.offcanvas-start.bg-s2( style="z-index: 10000;" tabindex='-1' )
     .offcanvas-header.border-bottom.border-s2
-        a(href='index.html') LOGO
+        a.icon-logo(href='index.html') 
+            include ../svg/logo.svg  
         button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Закрыть') 
             include ../svg/close.svg 
     .offcanvas-body.p-0
@@ -28,10 +30,10 @@ header.py-xl-0.container-fluid.border-bottom
             li.bg-s2.list-group-item.border-s2
                 a.nav-link( data-bs-dismiss='offcanvas' href="#project") Наши работы
             li.bg-s2.list-group-item.border-s2
-                a.nav-link( data-bs-dismiss='offcanvas' href="#project") Производство
+                a.nav-link( data-bs-dismiss='offcanvas' href="#production") Производство
             li.bg-s2.list-group-item.border-s2
-                a.nav-link( data-bs-dismiss='offcanvas' href="#project") Контакты
+                a.nav-link( data-bs-dismiss='offcanvas' href="#about") Контакты
             li.bg-s2.list-group-item.border-s2
-                a.nav-link( data-bs-dismiss='offcanvas' href="#project") О нас
+                a.nav-link( data-bs-dismiss='offcanvas' href="#contact") О нас
 
 

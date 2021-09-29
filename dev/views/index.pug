@@ -2,50 +2,52 @@ doctype html
 html(lang="ru")
     head
         include component/headDefolt
-        link(rel="stylesheet", href="style/index.min.css")
-        title Document
+        link(rel="stylesheet", href="style/index.min.css")  
     body 
-    include component/header
-    section.banner
-    section.project 
-        .container-fluid
-            .container
-                h2.text-center.fs-3 Наши работы
-                p.text-center.mb-4.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing.
-                .row.g-4
-                    - for(var i=0; i<14; i++)
-                        .col-xl-3.col-md-4.col-sm-6
-                            .card.border-0.bg-main.align-items-center
-                                img.project__img.rounded-circle.border.border-s2(src="img/f1.jpg", alt="name")
-                                .card-body.text-center 
-                                    h3.fs-5 Имя
-                                    p.text-muted Lorem, ipsum dolor.
-                                    p от 00 000 руб 
-                                    button.btn.btn-outline-light(type="button"  data-bs-toggle="modal" data-bs-target="#modal--des") Подробнее
-    section.production 
-        .container-fluid
-            .container
-                h2.text-center.fs-3 Производство
-                p.text-center.mb-4.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing.
-                .row 
-                    .col-md-6
-                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum distinctio perferendis in, autem vitae reiciendis! Praesentium maiores quos quibusdam corrupti sapiente impedit voluptate, asperiores, saepe reprehenderit nam error molestias assumenda minus libero itaque est tenetur dicta. Reiciendis, vel molestiae iure quo voluptates, est reprehenderit laboriosam ab assumenda eveniet quasi totam nulla illum praesentium! Distinctio quod vitae veniam quisquam itaque impedit, culpa ipsum facere neque beatae excepturi nulla minima quis id! Nam dicta assumenda dignissimos eius. Non dolore neque magni inventore voluptate? Dolorem ipsa quam, possimus facilis temporibus, eaque vel, hic sit labore non sint neque alias tempore accusamus esse nesciunt?
-                    .col-md-6
-                        .bg-secondary.h-100
-    section.about 
-        .container-fluid
-            .container
-                h2.text-center.fs-3.mb-4 О нас
-                .row 
-                    .col-md-4.col-12 
-                        h3.fs-4 title  
-                        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
-                    .col-md-4.col-12 
-                        h3.fs-4 title  
-                        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
-                    .col-md-4.col-12 
-                        h3.fs-4 title  
-                        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
+        include component/header
+        main
+            section.banner
+            section#project.project 
+                .container-fluid
+                    .container
+                        h2.text-center.fs-3 Наши работы
+                        p.text-center.mb-4.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing.
+                        .row.g-4.mb-5
+                            - for(var i=0; i<8; i++)
+                                .col-xl-3.col-md-4.col-sm-6
+                                    .card.border-0.bg-main.align-items-center
+                                        img.project__img.rounded-circle.border.border-s2(src="img/f1.jpg", alt="name")
+                                        .card-body.text-center 
+                                            h3.fs-5 Имя
+                                            p.text-muted Lorem, ipsum dolor.
+                                            p от 00 000 руб 
+                                            button.btn.btn-outline-light(type="button"  data-bs-toggle="modal" data-bs-target="#modal--des") Подробнее
+                        .text-center 
+                            button.btn.btn-outline-light Показать больше
+            section#production.production 
+                .container-fluid
+                    .container
+                        h2.text-center.fs-3 Производство
+                        p.text-center.mb-4.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing.
+                        .row 
+                            .col-md-6
+                                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum distinctio perferendis in, autem vitae reiciendis! Praesentium maiores quos quibusdam corrupti sapiente impedit voluptate, asperiores, saepe reprehenderit nam error molestias assumenda minus libero itaque est tenetur dicta. Reiciendis, vel molestiae iure quo voluptates, est reprehenderit laboriosam ab assumenda eveniet quasi totam nulla illum praesentium! Distinctio quod vitae veniam quisquam itaque impedit, culpa ipsum facere neque beatae excepturi nulla minima quis id! Nam dicta assumenda dignissimos eius. Non dolore neque magni inventore voluptate? Dolorem ipsa quam, possimus facilis temporibus, eaque vel, hic sit labore non sint neque alias tempore accusamus esse nesciunt?
+                            .col-md-6
+                                .bg-secondary.h-100
+            section#about.about 
+                .container-fluid
+                    .container
+                        h2.text-center.fs-3.mb-4 О нас
+                        .row 
+                            .col-md-4.col-12 
+                                h3.fs-4 title  
+                                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
+                            .col-md-4.col-12 
+                                h3.fs-4 title  
+                                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
+                            .col-md-4.col-12 
+                                h3.fs-4 title  
+                                p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
     include component/modalLid
     include component/modalDes
     include component/footer
