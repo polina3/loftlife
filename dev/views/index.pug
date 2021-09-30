@@ -7,6 +7,11 @@ html(lang="ru")
         include component/header
         main
             section.banner
+                picture
+                    source(media="(max-width: 576px)" srcset="img/main576.jpg 500w" sizes="100vw")
+                    source(media="(max-width: 768px)" srcset="img/main768.jpg 700w" sizes="100vw")
+                    source(media="(max-width: 992px)" srcset="img/main.jpg 1000w" sizes="100vw")
+                    img(src="img/main.jpg" alt="LoftLife выгодное предложение по межкомнатным перегородкам" width="" height="")
             section#project.project 
                 .container-fluid
                     .container
