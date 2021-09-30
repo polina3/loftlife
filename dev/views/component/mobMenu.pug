@@ -1,0 +1,18 @@
+#nav-menu.bg-main.offcanvas.offcanvas-start.bg-s2( style="z-index: 10000;" tabindex='-1' )
+    .offcanvas-header.border-bottom.border-s2
+        a.icon-logo(href='index.html') 
+            include ../svg/logo.svg  
+        button.btn-close.text-reset(type='button' data-bs-dismiss='offcanvas' aria-label='Закрыть') 
+            include ../svg/close.svg 
+    .offcanvas-body.p-0
+        ul.list-group.list-group-flush.w-100
+            li.bg-s2.list-group-item.border-s2
+                a.nav-link( data-bs-dismiss='offcanvas' href="#project") Наши работы
+            li.bg-s2.list-group-item.border-s2
+                a.nav-link( data-bs-dismiss='offcanvas' href="#process") Как заказать
+            li.bg-s2.list-group-item.border-s2
+                a.nav-link( data-bs-dismiss='offcanvas' href="#order") Узнать стоимость
+            li.bg-s2.list-group-item.border-s2
+                a.nav-link( data-bs-dismiss='offcanvas' href="#about") О нас
+            li.bg-s2.list-group-item.border-s2
+                a.nav-link( data-bs-dismiss='offcanvas' href="#contact") Контакты

@@ -152,6 +152,24 @@ header
         rect
             opacity: 0
 
+
+// лист ппроцесса
+.process__list
+    li
+        &:after
+            content: ''
+            display: block
+            width: 100px
+            height: 1px
+            background: #1a6037
+            margin-top: 1rem
+            margin-left: auto
+            margin-right: auto
+        &:last-child
+            &::after
+                display: none
+
+
 @media (prefers-reduced-motion: reduce)
     .modal
         animation: reduce

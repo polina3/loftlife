@@ -29,6 +29,76 @@ html(lang="ru")
                                             button.btn.btn-outline-light(type="button"  data-bs-toggle="modal" data-bs-target="#modal--des") Подробнее
                         .text-center 
                             button.btn.btn-outline-light Показать больше
+            section.instagram.bg-s2.border-top.border-bottom.border-secondary.py-5 
+                .container-fluid
+                    .container
+                            h2.text-center.fs-3.mb-0 Больше о нас вы можете узнать в нашем instagram: 
+                                a(href="https://www.instagram.com/loft_bar_blga/?utm_medium=copy_link")  @loft_bar_blga
+            section#process.process
+                .container-fluid
+                    .container
+                        h2.text-center.fs-3 Как заказать
+                        p.text-center.mb-4.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing.
+                        ul.list-unstyled.process__list
+                            li.text-center.mb-3 Lorem, ipsum dolor.
+                            li.text-center.mb-3 Lorem, ipsum dolor.
+                            li.text-center.mb-3 Lorem, ipsum dolor.
+                            li.text-center.mb-3 Lorem, ipsum dolor.
+                            li.text-center Lorem, ipsum dolor.
+            section#order.order.bg-s2.border-top.border-bottom.border-secondary.py-5
+                .container-fluid
+                    .container
+                        h2.text-center.fs-3 Узнать стоимость заказа
+                        p.text-center.mb-4.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing.
+                        .row 
+                            form.js-validate.col-md-4.col-12.m-auto
+                                .mb-3
+                                    input.bg-s2.form-control.input-data(type="text" placeholder="Ваше имя" name="name" autocomplete="off" data-validate)
+                                .mb-3
+                                    input.bg-s2.form-control.input-data.input-phone(type="tel" placeholder="Телефон" name="phone" inputmode="numeric" autocomplete="off" data-validate)
+                                button.btn.btn-outline-light.w-100(type="submit") Отправить
+            section#choose.choose 
+                .container-fluid
+                    .container
+                        h2.text-center.fs-3 Почему выбирают нас
+                        p.text-center.mb-4.text-muted Lorem ipsum dolor sit amet, consectetur adipisicing.
+                        .row.g-3 
+                            .col-md-6.col-12
+                                .d-flex.align-items-start.bg-s2.rounded.p-3
+                                    .choose__icon.bg-secondary.h-100.me-3 Иконка
+                                    div
+                                        h3.fs-5 Lorem, ipsum dolor.
+                                        p.m-0 Lorem ipsum dolor sit amet, consectetur adipisicing.
+                            .col-md-6.col-12
+                                .d-flex.align-items-start.bg-s2.rounded.p-3
+                                    .choose__icon.bg-secondary.h-100.me-3 Иконка
+                                    div
+                                        h3.fs-5 Lorem, ipsum dolor.
+                                        p.m-0 Lorem ipsum dolor sit amet, consectetur adipisicing.
+                            .col-md-6.col-12
+                                .d-flex.align-items-start.bg-s2.rounded.p-3
+                                    .choose__icon.bg-secondary.h-100.me-3 Иконка
+                                    div
+                                        h3.fs-5 Lorem, ipsum dolor.
+                                        p.m-0 Lorem ipsum dolor sit amet, consectetur adipisicing.
+                            .col-md-6.col-12
+                                .d-flex.align-items-start.bg-s2.rounded.p-3
+                                    .choose__icon.bg-secondary.h-100.me-3 Иконка
+                                    div
+                                        h3.fs-5 Lorem, ipsum dolor.
+                                        p.m-0 Lorem ipsum dolor sit amet, consectetur adipisicing.
+                            .col-md-6.col-12
+                                .d-flex.align-items-start.bg-s2.rounded.p-3
+                                    .choose__icon.bg-secondary.h-100.me-3 Иконка
+                                    div
+                                        h3.fs-5 Lorem, ipsum dolor.
+                                        p.m-0 Lorem ipsum dolor sit amet, consectetur adipisicing.
+                            .col-md-6.col-12
+                                .d-flex.align-items-start.bg-s2.rounded.p-3
+                                    .choose__icon.bg-secondary.h-100.me-3 Иконка
+                                    div
+                                        h3.fs-5 Lorem, ipsum dolor.
+                                        p.m-0 Lorem ipsum dolor sit amet, consectetur adipisicing.
             section#production.production 
                 .container-fluid
                     .container
@@ -38,21 +108,23 @@ html(lang="ru")
                             .col-md-6
                                 p Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum distinctio perferendis in, autem vitae reiciendis! Praesentium maiores quos quibusdam corrupti sapiente impedit voluptate, asperiores, saepe reprehenderit nam error molestias assumenda minus libero itaque est tenetur dicta. Reiciendis, vel molestiae iure quo voluptates, est reprehenderit laboriosam ab assumenda eveniet quasi totam nulla illum praesentium! Distinctio quod vitae veniam quisquam itaque impedit, culpa ipsum facere neque beatae excepturi nulla minima quis id! Nam dicta assumenda dignissimos eius. Non dolore neque magni inventore voluptate? Dolorem ipsa quam, possimus facilis temporibus, eaque vel, hic sit labore non sint neque alias tempore accusamus esse nesciunt?
                             .col-md-6
-                                .bg-secondary.h-100
+                                .bg-secondary.h-100 картинка
             section#about.about 
                 .container-fluid
                     .container
                         h2.text-center.fs-3.mb-4 О нас
                         .row 
-                            .col-md-4.col-12 
+                            .col-md-4.col-12.text-center 
                                 h3.fs-4 title  
                                 p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
-                            .col-md-4.col-12 
+                            .col-md-4.col-12.text-center 
                                 h3.fs-4 title  
                                 p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
-                            .col-md-4.col-12 
+                            .col-md-4.col-12.text-center 
                                 h3.fs-4 title  
                                 p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non, id!
+    
+    include component/mobMenu
     include component/modalLid
     include component/modalDes
     include component/footer
