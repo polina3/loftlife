@@ -2,6 +2,8 @@
 //= lib/bootstrap.bundle.min.js
 //= lib/inputmask.js
 //= lib/lazyload.js
+//= lib/moment.min.js
+
 
 
 $(document).ready(function(){  
@@ -12,7 +14,6 @@ $(document).ready(function(){
         if (st > lastScrollTop){
             $("header").addClass("hidden");
         } else {
-         
             $("header").removeClass("hidden");
         }
         lastScrollTop = st;
@@ -39,8 +40,10 @@ $(document).ready(function(){
     }
 
     // валидация и отправка
-    $('.js-validate').submit(function (event) {
+    $('.js-validate').submit(function (e) {
+        e.preventDefault();
         var form = $(this);
+        var error = 0;
         form.find('*[data-validate]').each(function (i, elem) {
             var value = $(elem).val();
             var type = $(elem).attr("type");
@@ -49,7 +52,7 @@ $(document).ready(function(){
                 setTimeout(function () {
                     $(elem).removeClass('is-invalid')
                 }.bind(elem), 2000);
-                event.preventDefault();
+                error++;
             }
             if (type == "tel") {
                 let s = $(elem).val().search('_')
@@ -58,10 +61,25 @@ $(document).ready(function(){
                     setTimeout(function () {
                         $(elem).removeClass('is-invalid')
                     }.bind(elem), 2000);
-                    event.preventDefault();
+                    error++;
                 }
             }
         })
+        if(error == 0){
+            var dataForm = form.serialize()+'&date='+moment().format("YYYY-MM-DD HH:mm:ss")
+            
+            $.ajax({
+                url: '/controller/ajax/addLead.php',
+                method: 'post',
+                dataType: 'html',
+                data: dataForm,
+                success: function(data){
+                    console.log(data);
+                    form.find('.form-control').val('');
+                    $('#modal--lead').modal('hide')
+                    $('#modal--success').modal('show')
+                }
+            });
+        }
     })
-
 })

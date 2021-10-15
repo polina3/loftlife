@@ -1,3 +1,5 @@
+$mainColor: #9BCCC8
+
 *
     padding: 0
     margin: 0
@@ -6,7 +8,7 @@ html
     height: 100%
     scroll-behavior: smooth
     --my-color-s1: #7405b2
-    --my-color-s2: #1a6037
+    --my-color-s2: #9BCCC8
     --my-color-s3: #262628
     --my-color-s4: #414142
     --my-color-rgb-s3: 38, 38, 40
@@ -92,6 +94,13 @@ label
         &::-webkit-input-placeholder
             color: #202020
 
+.form-check-input
+    background-color: transparent
+    &:checked
+        background-color: var(--my-color-s2)
+        border-color: var(--my-color-s2)
+    &:focus
+        border-color: var(--my-color-s2)
 
 // секция 
 section
@@ -152,7 +161,6 @@ header
         rect
             opacity: 0
 
-
 // лист ппроцесса
 .process__list
     li
@@ -161,14 +169,13 @@ header
             display: block
             width: 100px
             height: 1px
-            background: #1a6037
+            background: $mainColor
             margin-top: 1rem
             margin-left: auto
             margin-right: auto
         &:last-child
             &::after
                 display: none
-
 
 @media (prefers-reduced-motion: reduce)
     .modal
@@ -179,3 +186,6 @@ header
         svg
             width: 65px
             height: auto
+    .project__img
+        width: 130px
+        height: 130px
